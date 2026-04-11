@@ -140,11 +140,12 @@ def create_rolling_features(df, target_column='Weekly_Sales', group_column='Stor
     df = df.copy()
     
     for window in windows:
+        # Shift by one to ensure each row only uses past information.
         df[f'{target_column}_Rolling_Mean_{window}'] = df.groupby(group_column)[target_column].transform(
-            lambda x: x.rolling(window=window, min_periods=1).mean()
+            lambda x: x.shift(1).rolling(window=window, min_periods=1).mean()
         )
         df[f'{target_column}_Rolling_Std_{window}'] = df.groupby(group_column)[target_column].transform(
-            lambda x: x.rolling(window=window, min_periods=1).std()
+            lambda x: x.shift(1).rolling(window=window, min_periods=1).std()
         )
     
     return df
@@ -171,9 +172,15 @@ def simulate_price_feature(df, base_price_range=(80, 120), random_seed=42):
     df = df.copy()
     np.random.seed(random_seed)
     
-    # Base price per store
-    store_base_price = df.groupby('Store')['Weekly_Sales'].mean().rank(pct=True) * 20 + base_price_range[0]
-    df['Base_Price'] = df['Store'].map(store_base_price)
+    # Base price per store from store id only (no target-derived signal).
+    store_min = df['Store'].min()
+    store_max = df['Store'].max()
+    if store_max == store_min:
+        store_rank = np.ones(len(df)) * 0.5
+    else:
+        store_rank = (df['Store'] - store_min) / (store_max - store_min)
+
+    df['Base_Price'] = (base_price_range[0] + (store_rank * 20)).astype(float)
     
     # Seasonal price adjustments
     season_price_factor = {
@@ -188,10 +195,16 @@ def simulate_price_feature(df, base_price_range=(80, 120), random_seed=42):
     else:
         df['Season_Price_Factor'] = 1.0
     
+    # Add modest macro adjustment independent of target.
+    fuel_norm = (df['Fuel_Price'] - df['Fuel_Price'].mean()) / (df['Fuel_Price'].std() + 1e-8)
+    cpi_norm = (df['CPI'] - df['CPI'].mean()) / (df['CPI'].std() + 1e-8)
+    econ_factor = 1 + (0.02 * fuel_norm) + (0.01 * cpi_norm)
+
     # Final price with random variation
     df['Price'] = (
         df['Base_Price'] * 
         df['Season_Price_Factor'] * 
+        econ_factor *
         (1 + np.random.normal(0, 0.05, len(df)))
     ).round(2)
     
