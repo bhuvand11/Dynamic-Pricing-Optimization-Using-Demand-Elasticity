@@ -4,18 +4,18 @@
 ![ML](https://img.shields.io/badge/Machine%20Learning-Retail%20Analytics-green)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-## 📋 Project Overview
+##  Project Overview
 
 An end-to-end machine learning project that develops a data-driven dynamic pricing optimization system for the retail sector using Walmart Sales data. The system predicts product demand under varying conditions and identifies optimal prices that maximize revenue.
 
-## 🎯 Objectives
+##  Objectives
 
 - **Predict demand** using machine learning regression models
 - **Analyze price elasticity** to understand demand sensitivity to price changes
 - **Optimize revenue** by recommending optimal pricing strategies
 - **Provide actionable insights** through comprehensive visualizations
 
-## 📊 Dataset
+##  Dataset
 
 **Walmart Sales Dataset** - Historical weekly sales data from 45 Walmart stores
 
@@ -31,7 +31,7 @@ An end-to-end machine learning project that develops a data-driven dynamic prici
 
 **Dataset Size:** 6,435 records
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 Dynamic-Pricing-Optimization-Using-Demand-Elasticity/
@@ -100,9 +100,9 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-## 📚 Project Methodology
+## Project Methodology
 
-### Phase 1: Data Exploration and Preprocessing ✅
+### Phase 1: Data Exploration and Preprocessing 
 - Load and inspect dataset
 - Handle missing values and outliers
 - Exploratory data analysis (EDA)
@@ -175,7 +175,7 @@ This project demonstrates:
 - Revenue optimization strategies
 - Data visualization and storytelling
 
-## 📦 Dependencies
+## Dependencies
 
 See [requirements.txt](requirements.txt) for complete list:
 - pandas==2.1.4
@@ -195,7 +195,7 @@ See [requirements.txt](requirements.txt) for complete list:
 4. Visualizations are automatically saved to `output/` directory
 5. Trained models are saved to `models/` directory
 
-## 📊 Expected Results
+##  Expected Results
 
 - **Demand Prediction Model** with high accuracy (low MAE/RMSE)
 - **Price Elasticity Insights** for each store and time period
@@ -203,24 +203,24 @@ See [requirements.txt](requirements.txt) for complete list:
 - **Interactive Visualizations** for business decision-making
 - **Complete Analysis Report** with actionable insights
 
-## 👥 Contributors
+## Contributors
 
 - Team Member 1 - Data Engineering & Pipeline
 - Team Member 2 - ML Model Development
 - Team Member 3 - Business Analytics & Optimization
 - Team Member 4 - Visualization & Documentation
 
-## 📝 License
+##  License
 
 This project is for educational purposes.
 
-## 🤝 Acknowledgments
+## Acknowledgments
 
 - Walmart Sales Dataset
 - VS Code with GitHub Copilot for assisted development
 
 ---
 
-**Project Status:** 🟡 In Progress - Phase 1 Complete
+**Project Status:** In Progress - Phase 1 Complete
 
 *Last Updated: March 2026*
