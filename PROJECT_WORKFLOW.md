@@ -1,8 +1,8 @@
 # Project Workflow & Task Distribution
 
-## 📌 Current Status: Phase 1 Setup Complete ✅
+##  Current Status: Phase 1 Setup Complete 
 
-### ✅ Completed Tasks:
+###  Completed Tasks:
 1. Virtual environment setup (d_env)
 2. Dependencies installed
 3. Project structure created
@@ -12,7 +12,7 @@
 
 ---
 
-## 🎯 Project Phases Overview
+##  Project Phases Overview
 
 ### Phase 1: Data Exploration & Preprocessing ⏳ IN PROGRESS
 **Notebook:** `01_data_exploration_and_preprocessing.ipynb`
@@ -64,7 +64,7 @@
 
 ---
 
-### Phase 4: Price Elasticity Analysis 💰 UPCOMING
+### Phase 4: Price Elasticity Analysis UPCOMING
 **Notebook:** `04_price_elasticity_analysis.ipynb` (To be created)
 
 **Tasks:**
@@ -168,7 +168,7 @@
 
 ---
 
-## 🚀 Next Steps (Immediate Actions)
+##  Next Steps (Immediate Actions)
 
 ### Step 1: Run First Notebook (Team Member 1 & 4)
 ```bash
@@ -200,14 +200,14 @@ jupyter notebook
 
 ---
 
-## 📊 Progress Tracking
+##  Progress Tracking
 
 ### Weekly Goals
 
 **Week 1:**
-- ✅ Project setup
-- ⏳ Complete Phase 1 (EDA)
-- ⏳ Start Phase 2 (Feature Engineering)
+-  Project setup
+-  Complete Phase 1 (EDA)
+-  Start Phase 2 (Feature Engineering)
 
 **Week 2:**
 - Complete Phase 2
@@ -257,7 +257,7 @@ git push origin feature/your-feature-name
 
 ---
 
-## 📞 Communication
+##  Communication
 
 ### Daily Standup Topics
 - What did you complete yesterday?
@@ -288,7 +288,7 @@ git push origin feature/your-feature-name
 
 ---
 
-## ⚠️ Important Notes
+##  Important Notes
 
 1. **Always activate the virtual environment before working:**
    ```bash
