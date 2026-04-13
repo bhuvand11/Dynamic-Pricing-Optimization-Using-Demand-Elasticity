@@ -187,7 +187,7 @@ See [requirements.txt](requirements.txt) for complete list:
 - notebook==7.0.6
 - ipykernel==6.27.1
 
-## 🚀 Usage
+##  Usage
 
 1. Start with `01_data_exploration_and_preprocessing.ipynb` for data understanding
 2. Progress through numbered notebooks sequentially
