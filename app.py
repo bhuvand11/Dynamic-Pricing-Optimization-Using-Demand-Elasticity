@@ -83,7 +83,7 @@ def render_header(df: pd.DataFrame) -> None:
     uplift_abs = recommended_total - baseline_total
     uplift_pct = (uplift_abs / baseline_total * 100.0) if baseline_total else 0.0
 
-    st.title("Phase 6: Simple Real-Time Pricing Dashboard")
+    st.title("Simple Real-Time Pricing Dashboard")
     st.caption("Audience: teammates | Scope: localhost only | Data source: Phase 5 output CSV")
 
     c1, c2, c3, c4 = st.columns(4)
