@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11.8-blue)
 ![ML](https://img.shields.io/badge/Machine%20Learning-Retail%20Analytics-green)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
 ##  Project Overview
 
